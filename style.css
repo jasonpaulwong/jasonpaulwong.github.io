@@ -1,5 +1,15 @@
 body {
 	font-family: 'Open Sans', sans-serif;
   	min-height: 2000px;
-  	padding-top: 70px;
+  	padding-top: 50px;
+}
+
+#home {
+	background-color: #E74256;
+}
+
+#home .row {
+	padding: 300px 30px 300px 30px;
+	text-align: center;
+	color: white;
 }
