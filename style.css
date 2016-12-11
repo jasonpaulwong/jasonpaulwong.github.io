@@ -1,15 +1,33 @@
 body {
 	font-family: 'Open Sans', sans-serif;
   	min-height: 2000px;
-  	padding-top: 50px;
+  	padding-top: 0px;
 }
 
 #home {
-	background-color: #E74256;
+	background-color: #0B3C5D;
 }
 
 #home .row {
-	padding: 200px 30px 200px 30px;
+	padding: 325px 30px 325px 30px;
 	text-align: center;
+	color: white;
+}
+
+#about {
+	background-color: #328CC1;
+}
+
+#about .row {
+	padding: 325px 30px 325px 30px;
+	color: white;
+}
+
+#skills {
+	background-color: #1D2731;
+}
+
+#skills .row {
+	padding: 325px 30px 325px 30px;
 	color: white;
 }
