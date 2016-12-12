@@ -33,12 +33,6 @@ body {
 	background-color: #4C619C;
 }
 
-#about .title {
-	padding: 0px 0px 0px 0px;
-	text-align: center;
-	font-size: 60px;
-}
-
 #about .row {
 	padding: 170px 30px 170px 30px;
 	color: white;
@@ -69,3 +63,43 @@ body {
 	color: white;
 }
 
+#projects {
+	background-color: #4C619C;
+}
+
+#projects .row {
+	padding: 170px 30px 142px 30px;
+	color: white;
+}
+
+#projects .img-circle {
+	height: 375px;
+	width: 375px;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+#projects .thumbnail {
+	margin-bottom:6px;
+	border-radius: 50px;
+	width: 300px;
+	display: block;
+    margin: 0 auto;
+}
+
+#projects .container {
+	text-align: center;
+	color: white;
+	padding: 0px 0px 10px 0px;
+}
+
+.carousel {
+	width:275px;
+	margin: 0 auto;
+}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  width:0%;
+}
