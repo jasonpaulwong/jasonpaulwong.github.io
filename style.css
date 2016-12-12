@@ -5,8 +5,14 @@ body {
 }
 
 #home {
-	background-color: #0B3C5D;
-}
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url(images/background.jpg);}
 
 #home .row {
 	padding: 325px 30px 325px 30px;
@@ -14,17 +20,31 @@ body {
 	color: white;
 }
 
+#about .img-circle {
+	height: 375px;
+	width: 375px;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
 #about {
-	background-color: #328CC1;
+	background-color: #7878BE;
+}
+
+#about .title {
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	font-size: 60px;
 }
 
 #about .row {
-	padding: 325px 30px 325px 30px;
+	padding: 170px 30px 170px 30px;
 	color: white;
 }
 
 #skills {
-	background-color: #1D2731;
+	background-color: #6296C8;
 }
 
 #skills .row {
