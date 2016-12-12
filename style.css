@@ -5,14 +5,15 @@ body {
 }
 
 #home {
-  background: 
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ),
-    /* bottom, image */
-    url(images/background.jpg);}
+  	background: 
+	    linear-gradient(
+    		rgba(0, 0, 0, 0.6), 
+      		rgba(0, 0, 0, 0.6)
+    	),
+    	/* bottom, image */
+    	url(images/background.jpg);
+	background-size: cover;
+}
 
 #home .row {
 	padding: 325px 30px 325px 30px;
@@ -29,7 +30,7 @@ body {
 }
 
 #about {
-	background-color: #7878BE;
+	background-color: #4C619C;
 }
 
 #about .title {
@@ -43,11 +44,28 @@ body {
 	color: white;
 }
 
+#jobs {
+	background-color: #3D868D;
+}
+
+#jobs .row {
+	padding: 285px 30px 240px 30px;
+	text-align: center;
+	color: white;
+}
+
+#jobs .container {
+	text-align: center;
+	color: white;
+	padding: 0px 0px 10px 0px;
+}
+
 #skills {
-	background-color: #6296C8;
+	background-color: #8673BB;
 }
 
 #skills .row {
 	padding: 325px 30px 325px 30px;
 	color: white;
 }
+
