@@ -15,7 +15,7 @@
     <title>Jason Paul Wong</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
@@ -44,15 +44,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#jobs">Jobs</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#skills">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Contact</a></li>
-
-
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
 
     <!--begin home-->
     <section id="home">
@@ -96,7 +93,7 @@
             <h3>R&D Android and Surface Apps</h3>
           </div><!-- /col-lg-6 -->
         </div><!-- /row -->
-        <h4>More info on my LinkedIn and résumé</h4>
+        <h4>More info on my LinkedIn and résumé below</h4>
       </div><!-- /container -->
     </section><!-- /home-->
 
@@ -105,21 +102,135 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>I graduated from the University of California San Diego in March 2016 with a B.S. in Computer Science. I missed cum laude by 0.01 😞.</h2>
           </div><!-- /col-lg-6 -->
           <div class="col-lg-6">
-            <h2>I have 18 months of experience in Java backend servers. I also program iOS apps– mainly in Swift but I am currently learning React Native.</h2>
           </div><!-- /col-lg-6 -->
         </div><!-- /row -->
       </div><!-- /container -->
     </section><!-- /home-->
 
+    <!--begin Projects-->
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <a title="LBCSD" href="#projects"> 
+              <img class="thumbnail img-responsive" id="lbcsd" src="images/lbcsd/lbcsd.jpeg">
+            </a>
+            <h3>LBCSD</h3>
+          </div><!-- /col-lg-6 -->
+          <div class="col-lg-6">
+            <a title="LBCSD" href="#projects"> 
+              <img class="thumbnail img-responsive" id="giventure" src="images/giventure/giventure.png">
+            </a>
+            <h3>Giventure</h3>
+          </div><!-- /col-lg-6 -->
+        </div><!-- /row -->
+        <h4>Yes, you can (and should) click on them</h4>
+      </div><!-- /container -->
+    </section><!-- /home-->
+
+    <div class="hidden" id="img-repo">
+      <!-- #image-1 -->
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Login Screen" src="images/lbcsd/login.png">
+      </div>
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Sermon Screen" src="images/lbcsd/sermons.png">
+      </div>
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Audio Playing Screen" src="images/lbcsd/audioplayer.png">
+      </div>  
+
+      <!--
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Calendar Screen" src="images/lbcsd/calendar.png">
+      </div>      
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Contact Screen" src="images/lbcsd/contact.png">
+      </div>    -->
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Articles Screen" src="images/lbcsd/beacon.png">
+      </div>    
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Choose Calendars Screen" src="images/lbcsd/choosecalendars.png">
+      </div>    
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="Handouts Screen" src="images/lbcsd/handouts.png">
+      </div>    
+      <div class="item" id="lbcsd">
+        <img class="thumbnail img-responsive" title="More Screen" src="images/lbcsd/more.png">
+      </div> 
+      <div class="item" id="giventure">
+        <img class="thumbnail img-responsive" title="Login Screen" src="images/giventure/login.png">
+      </div>     
+    </div>
+
+    <div class="modal" id="modal-gallery" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal">×</button>
+              <h3 class="modal-title"></h3>
+          </div>
+          <div class="modal-body">
+              <div id="modal-carousel" class="carousel">
+                <div class="carousel-inner">           
+                </div>
+                <a class="carousel-control left" href="#modal-carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+               <a class="carousel-control right" href="#modal-carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+             </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="jquery/jquery.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        /* activate the carousel */
+        $("#modal-carousel").carousel({interval:false});
+
+        /* change modal title when slide changes */
+        $("#modal-carousel").on("slid.bs.carousel", function () {
+          $(".modal-title")
+          .html($(this)
+          .find(".active img")
+          .attr("title"));
+        });
+
+        /* when clicking a thumbnail */
+        $(".row .thumbnail").click(function(){
+          var content = $(".carousel-inner");
+          var title = $(".modal-title");
+  
+          content.empty();  
+          title.empty();
+  
+          var id = this.id;  
+          var repo = $("#img-repo .item");
+          var repoCopy = repo.filter("#" + id).clone();
+          var active = repoCopy.first();
+  
+          active.addClass("active");
+          title.html(active.find("img").attr("title"));
+          content.append(repoCopy);
+
+          // show the modal
+          $("#modal-gallery").modal("show");
+          return false;
+      });
+    });
+  </script>
 
   </body>
 </html>
