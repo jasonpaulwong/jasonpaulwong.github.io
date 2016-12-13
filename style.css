@@ -24,22 +24,29 @@ body {
 #about .img-circle {
 	height: 375px;
 	width: 375px;
-    border: 3px solid white;
+    border: 1px solid #333333;
     display: block;
     margin: 0 auto;
 }
 
 #about {
-	background-color: #4C619C;
+	background-color: #FAFAFA;
 }
 
 #about .row {
 	padding: 170px 30px 170px 30px;
-	color: white;
+	color: #333333;
 }
 
 #jobs {
-	background-color: #3D868D;
+  	background: 
+	    linear-gradient(
+    		rgba(0, 0, 0, 0.6), 
+      		rgba(0, 0, 0, 0.6)
+    	),
+    	/* bottom, image */
+    	url(images/fifth.jpg);
+	background-size: cover;
 }
 
 #jobs .row {
@@ -55,20 +62,35 @@ body {
 }
 
 #skills {
-	background-color: #8673BB;
+	background-color: #FAFAFA;
+}
+
+#skills .thumbnail {
+	margin-bottom:6px;
+	border-radius: 50px;
+	width: 250px;
+	display: block;
+    margin: 0 auto;
 }
 
 #skills .row {
-	padding: 325px 30px 325px 30px;
+	padding: 50px 30px 50px 30px;
 	color: white;
 }
 
 #projects {
-	background-color: #4C619C;
+  	background: 
+	    linear-gradient(
+    		rgba(0, 0, 0, 0.6), 
+      		rgba(0, 0, 0, 0.6)
+    	),
+    	/* bottom, image */
+    	url(images/first.jpg);
+	background-size: cover;
 }
 
 #projects .row {
-	padding: 170px 30px 142px 30px;
+	padding: 180px 30px 185px 30px;
 	color: white;
 }
 
@@ -83,7 +105,7 @@ body {
 #projects .thumbnail {
 	margin-bottom:6px;
 	border-radius: 50px;
-	width: 300px;
+	width: 250px;
 	display: block;
     margin: 0 auto;
 }
